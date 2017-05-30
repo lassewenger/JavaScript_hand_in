@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="projects">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Ionic Demo Backend</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="javascripts/app.js"></script>
+
+</head>
+
+<body >
+
+<div class="container">
+  <div class="header clearfix">
+
+    <h3 class="text-muted">Backend for ionic class demo</h3>
+  </div>
+
+  <div class="jumbotron">
+    <h3>On this simple page we will watch and monitor all projects and tasks created by mobile clients using the API we
+      will expose on this server</h3>
+  </div>
+
+  <div ng-controller="projectCtrl">
+    <div class="table-responsive" style="margin-left: auto; margin-right: auto;width: 80%">
+      <table class="table table-striped">
+        <thead>
+        <tr><th>Project</th><th>Tasks</th></tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="project in projects">
+          <td>{{project.title}}</td>
+          <td><span ng-repeat="task in project.tasks">{{task}}, </span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <br/>
+  <footer class="footer" style="text-align: center">
+    <p>&copy; 2016 MEAN Course, Inc.</p>
+  </footer>
+
+</div> <!-- /container -->
+</body>
+</html>

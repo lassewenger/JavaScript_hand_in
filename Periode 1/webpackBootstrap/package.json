@@ -1,0 +1,33 @@
+{
+  "name": "webpack1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server main.js --inline --hot --port 8080",
+    "startdist": "webpack-dev-server --content-base dist --port 3000",
+    "prod": "webpack",
+    "prodm": "webpack -p",
+    "run": "webpack-dev-server --hot"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "css-loader": "^0.25.0",
+    "express": "^4.14.1",
+    "file-loader": "^0.10.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.17.4",
+    "style-loader": "^0.13.1"
+  }
+}

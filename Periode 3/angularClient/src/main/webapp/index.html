@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="myModule" ng-controller="myController as myCtrl">
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+        <script src="javascript.js"></script>
+    </head>
+    <body>
+        <h1>TheFunnySite</h1>
+        <hr>
+        <div>
+            <div>
+                <h2>All Jokes</h2>
+                <ul ng-repeat="joke in myCtrl.jokeData">
+                    <li>
+                        <ul>
+                            <li>The joke: {{joke.joke}}</li>                    
+                            <li>The id: {{joke._id}}</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div>
+                <h2>Get one joke by id</h2>
+                <form ng-submit="myCtrl.getJoke(getId)">
+                    <input type="text" placeholder="joke ID" ng-model="getId">
+                    <button type="submit">Hent joke</button>
+                </form>                
+                <p>Joke by id: {{myCtrl.jokeById.joke}}</p>                                
+            </div>            
+            <div>
+                <h2>Delete joke by id</h2>
+                <form ng-submit="myCtrl.deleteJoke(jokeId)">
+                    <input type="text" placeholder="joke ID" ng-model="deleteId">
+                    <button type="submit">Slet joke</button>
+                </form>                                                
+            </div>            
+            <div>
+                <h2>Add joke</h2>
+                <form ng-submit="myCtrl.addJoke(joke)">
+                    <input type="text" placeholder="joke" ng-model="joke.joke">
+                    <input type="text" placeholder="category" ng-model="joke.category">
+                    <input type="text" placeholder="author" ng-model="joke.reference.author">
+                    <input type="text" placeholder="link" ng-model="joke.reference.link">
+                    <button type="submit">Add joke</button>
+                    {{joke}}
+                </form>                                                
+            </div>            
+        </div>        
+    </body>
+</html>
