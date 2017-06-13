@@ -2,18 +2,12 @@
 
 function helloWorld() {
     console.log(myString); // => undefined
-    var myString = 'Helle World';
-    console.log(myString); // => Hello World
-}
-
-function helloWorld() {
-    var myString;
-    console.log(myString); // => undefined
-    myString = 'Helle World';
+    var myString = 'Hello World';
     console.log(myString); // => Hello World
 }
 
 function example1() {
+
     x = 5; // Assign 5 to x
 
     elem = document.getElementById("demo"); // Find an element 
@@ -23,6 +17,7 @@ function example1() {
 
 }
 
+//This is what really happens.
 function example2() {
 
 
@@ -33,3 +28,5 @@ function example2() {
     elem.innerHTML = x;                     // Display x in the element
 
 }
+
+helloWorld();
