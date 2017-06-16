@@ -9,6 +9,8 @@ var makeCounter = function() {
     value: function() { return privateCounter;}
   }
 };
+
+var privateCounter = 1
 var counter1 = makeCounter();
 var counter2 = makeCounter();
 

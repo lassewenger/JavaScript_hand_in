@@ -1,5 +1,5 @@
-var HOST = "http://ionicbackend-plaul.rhcloud.com"
-//var HOST = "http://localhost:3000";
+//var HOST = "http://ionicbackend-plaul.rhcloud.com"
+var HOST = "http://localhost:3000";
 
 angular.module('starter', ['ionic'])
 

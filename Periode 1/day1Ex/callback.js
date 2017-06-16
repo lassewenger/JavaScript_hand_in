@@ -3,6 +3,7 @@
 
 let  names = ["Emma", "Lasse", "Jonas", "Lars", "Hamza", "ib"];
 
+
 //--------------------Opg 1 filter og map------------------------------------
 console.log("=================================================================")
 let rows = names.map(function(name){
@@ -31,9 +32,10 @@ console.log("\n" + namesFilter + "\n");
 console.log("=================================================================")
 
 //------------------Opg 3 Prototype--------------------------------------------------------
-Array.prototype.myFilter = function(callback){    
+Array.prototype.myFilter = function(callback){ /* A "callback" is any function that is called by another function
+which takes the first function as a parameter. A lot of the time, a "callback" is a function that is called when something happens.*/
     let arrayToReturn = [];
-    this.forEach(function(name){
+    this.forEach(function(name){ // this er det kaldende object, altså names arrayet.
         let shouldInclude = callback(name);
         if(shouldInclude){
             arrayToReturn.push(name);
@@ -55,7 +57,6 @@ Array.prototype.myMap = function (callback){
     });
     return arrayToReturn;
 };
-
 let protoMap = names.myMap(function(name){
     return name.toUpperCase();
 });
